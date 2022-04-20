@@ -1,0 +1,78 @@
+body {
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    color: #fff;
+    background: #333;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    width: 435px;
+    top: 100px;
+    left: 35%;
+    overflow: hidden;
+
+    .slider {
+        &--inside {
+            top: -50px;
+            left: 14%;
+            width: 300px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            padding: 2px;
+            border: #666 solid 1px;
+
+            img {
+                position: absolute;
+                opacity: 0;
+                width: 300px;
+                height: 200px;
+                transition: 0.5s ease all;
+                //right: 300px;
+                &:first-child {
+                    opacity: 1;
+                }
+            }
+
+            .one {
+                position: absolute;
+                left: 2px;
+                display: inline-block;
+                opacity: 1;
+                transition: 1s ease all;
+            }
+        }
+        &--init {
+            img {
+                //opacity: 1;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .prev {
+        position: relative;
+        right: 0;
+        top: 85px;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .next {
+        position: relative;
+        left: 375px;
+        top: -175px;
+        cursor: pointer;
+        z-index: 100;
+    }
+}

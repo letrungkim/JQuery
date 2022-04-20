@@ -1,0 +1,6 @@
+p::before {
+  content: "" attr(attr-before) ""; }
+p::after {
+  content: ""; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,13 @@
+.first-jquery {
+    &--attribute {
+    }
+}
+p {
+    &::before {
+        content: "" attr(attr-before) "";
+    }
+
+    &::after {
+        content: "";
+    }
+}
