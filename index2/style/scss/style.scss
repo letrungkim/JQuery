@@ -37,7 +37,7 @@ h1 {
                 opacity: 0;
                 width: 300px;
                 height: 200px;
-                transition: 0.5s ease all;
+                //transition: 0.5s ease all;
                 //right: 300px;
                 &:first-child {
                     opacity: 1;
@@ -58,6 +58,24 @@ h1 {
                 font-size: 14px;
             }
         }
+        &--inside-two {
+            top: -50px;
+            left: 14%;
+            width: 700px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            padding: 2px;
+            border: #666 solid 1px;
+        }
+    }
+
+    &--inside-three {
+        position: relative;
+        width: 700px;
+        top: 100px;
+        left: 35%;
+        overflow: hidden;
     }
 
     .prev {

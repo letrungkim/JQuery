@@ -30,8 +30,7 @@ h1 {
       position: absolute;
       opacity: 0;
       width: 300px;
-      height: 200px;
-      transition: 0.5s ease all; }
+      height: 200px; }
       .container .slider--inside img:first-child {
         opacity: 1; }
     .container .slider--inside .one {
@@ -42,6 +41,21 @@ h1 {
       transition: 1s ease all; }
   .container .slider--init img {
     font-size: 14px; }
+  .container .slider--inside-two {
+    top: -50px;
+    left: 14%;
+    width: 700px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    padding: 2px;
+    border: #666 solid 1px; }
+  .container--inside-three {
+    position: relative;
+    width: 700px;
+    top: 100px;
+    left: 35%;
+    overflow: hidden; }
   .container .prev {
     position: relative;
     right: 0;
