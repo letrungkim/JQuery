@@ -15,36 +15,36 @@ h1 {
   position: relative;
   width: 435px;
   top: 100px;
-  left: 35%;
-  overflow: hidden; }
+  left: 50%;
+  transform: translateX(-50%); }
   .container .slider--inside {
-    top: -50px;
-    left: 14%;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 300px;
     height: 200px;
     position: relative;
-    overflow: hidden;
     padding: 2px;
     border: #666 solid 1px; }
     .container .slider--inside img {
       position: absolute;
-      opacity: 0;
       width: 300px;
       height: 200px; }
-      .container .slider--inside img:first-child {
-        opacity: 1; }
     .container .slider--inside .one {
       position: absolute;
       left: 2px;
       display: inline-block;
       opacity: 1;
       transition: 1s ease all; }
+  .container .slider--outside {
+    position: relative; }
   .container .slider--init img {
     font-size: 14px; }
   .container .slider--inside-two {
-    top: -50px;
-    left: 14%;
-    width: 700px;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
     height: 200px;
     position: relative;
     overflow: hidden;
@@ -52,20 +52,23 @@ h1 {
     border: #666 solid 1px; }
   .container--inside-three {
     position: relative;
-    width: 700px;
+    width: 435px;
     top: 100px;
-    left: 35%;
+    left: 50%;
+    transform: translateX(-50%);
     overflow: hidden; }
   .container .prev {
-    position: relative;
-    right: 0;
-    top: 85px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
     z-index: 100; }
   .container .next {
-    position: relative;
-    left: 375px;
-    top: -175px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
     z-index: 100; }
 

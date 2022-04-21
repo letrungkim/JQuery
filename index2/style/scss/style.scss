@@ -18,30 +18,32 @@ h1 {
     position: relative;
     width: 435px;
     top: 100px;
-    left: 35%;
-    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    //overflow: hidden;
 
     .slider {
         &--inside {
-            top: -50px;
-            left: 14%;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
             width: 300px;
             height: 200px;
             position: relative;
-            overflow: hidden;
+            //overflow: hidden;
             padding: 2px;
             border: #666 solid 1px;
 
             img {
                 position: absolute;
-                opacity: 0;
+                //opacity: 0;
                 width: 300px;
                 height: 200px;
                 //transition: 0.5s ease all;
                 //right: 300px;
-                &:first-child {
-                    opacity: 1;
-                }
+                // &:first-child {
+                //     opacity: 1;
+                // }
             }
 
             .one {
@@ -52,6 +54,9 @@ h1 {
                 transition: 1s ease all;
             }
         }
+        &--outside {
+            position: relative;
+        }
         &--init {
             img {
                 //opacity: 1;
@@ -59,9 +64,10 @@ h1 {
             }
         }
         &--inside-two {
-            top: -50px;
-            left: 14%;
-            width: 700px;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
             height: 200px;
             position: relative;
             overflow: hidden;
@@ -72,24 +78,27 @@ h1 {
 
     &--inside-three {
         position: relative;
-        width: 700px;
+        width: 435px;
         top: 100px;
-        left: 35%;
+        left: 50%;
+        transform: translateX(-50%);
         overflow: hidden;
     }
 
     .prev {
-        position: relative;
-        right: 0;
-        top: 85px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
         cursor: pointer;
         z-index: 100;
     }
 
     .next {
-        position: relative;
-        left: 375px;
-        top: -175px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
         cursor: pointer;
         z-index: 100;
     }
