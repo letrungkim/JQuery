@@ -44,7 +44,6 @@ function nextBtn() {
 }
 
 function imgArr() {
-    var nextIndex = $('.slider--inside img').length - 1;
     $('.slider--inside img').each(function (index) {
         $(this).attr("imgIndex", index);
         if (index != 0) {
