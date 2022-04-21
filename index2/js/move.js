@@ -7,50 +7,36 @@ var check;
 
 $(document).ready(function () {
     imgArr();
-    //showImg(imgIndex);
     prevBtn();
     nextBtn();
 })
 
 function prevBtn() {
-    // $('.prev').on('click', function () {
-    //     moveImg(-1, 0);
-    // })
-
     var nextIndex = $('.slider--inside img').length - 1;
-    var init = 0, val = 0, cur = 0;
     $('.prev').on('click', function () {
-        val = 100;
-        init = -100;
-        cur = init + val;
+        var move = -100;
         if (flag == true) {
             flag = false;
             if (imgIndex == 0) {
-                showImg(nextIndex, imgIndex, val, init, cur);
+                showImg(nextIndex, imgIndex, move);
             } else {
-                showImg(imgIndex - 1, imgIndex, val, init, cur);
+                showImg(imgIndex - 1, imgIndex, move);
             }
         }
     })
 }
 
 function nextBtn() {
-    // $('.next').on('click', function () {
-    //     moveImg(1, 0);
-    // })
-    var init = 0, val = 0, cur = 0;
     $('.next').on('click', function () {
-        val = -100;
-        init = 100;
-        cur = init + val;
+        var move = 100;
         if (flag == true) {
             // Set flag, khi flag = true, thi function prev moi chay, nguoc lai flag = false thi ko
             flag = false;
             // Set flag = false, khi nay bam nut Prev thi function prev se ko hoat dong do function chi hoat dong khi flag = true
             if (imgIndex < $('.slider--inside img').length - 1) {
-                showImg(imgIndex + 1, imgIndex, val, init, cur)
+                showImg(imgIndex + 1, imgIndex, move)
             } else {
-                showImg(0, imgIndex, val, init, cur)
+                showImg(0, imgIndex, move)
             }
         }
 
@@ -68,22 +54,13 @@ function imgArr() {
     $('.slider--inside img').css({ "opacity": "1" })
 }
 
-function showImg(nextInd, currentInd, val, init, cur) {
-    $(`[imgIndex=${nextInd}]`).css({ "left": `${init}%` });
-    $(`[imgIndex=${currentInd}]`).animate({ "left": `${val}%` });
-    $(`[imgIndex=${nextInd}]`).animate({ "left": `${cur}%` }, function () {
+function showImg(nextInd, currentInd, val) {
+    $(`[imgIndex=${nextInd}]`).css({ "left": `${val}%` });
+    $(`[imgIndex=${currentInd}]`).animate({ "left": `${-val}%` });
+    $(`[imgIndex=${nextInd}]`).animate({ "left": `${val - val}%` }, function () {
         imgIndex = nextInd;
         flag = true;
         // Sau khi function chay hoan tat thi set flag = true de chay hinh khi an nut Prev, luc nay flag == true nen function moi co the chay tiep
     });
 }
-
-// function showPrevImg(prevInd, currentInd) {
-//     $(`[imgIndex=${prevInd}]`).css({ "left": "-100%" });
-//     $(`[imgIndex=${currentInd}]`).animate({ "left": "+=100%" });
-//     $(`[imgIndex=${prevInd}]`).animate({ "left": "+=100%" }, function () {
-//         imgIndex = prevInd;
-//         flag = true;
-//     });
-// }
 
